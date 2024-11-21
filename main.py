@@ -6,10 +6,15 @@ while True:
 	else:
 		text = text + '\n' + entered
 
+character_count = len(text)
+print('Character count (includes spaces and newlines):', character_count)
+
 text_corrected = text.replace('—', ' ') #because you are NOT supposed to put spaces around your em dashes!!! i WILL make the assumption that people know how to use punctuation correctly!!
 word_count = len(text_corrected_for_words)
+print('Word count:', word_count)
 
 text_corrected = text_corrected.replace('!', '.')
 text_corrected = text_corrected.replace('?', '.')
 sentences = text_corrected.split('. ')
 words_per_sentence = word_count/len(sentences)
+
